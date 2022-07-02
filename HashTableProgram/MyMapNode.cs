@@ -11,6 +11,7 @@ namespace HashTableProgram
         private readonly int size;
         private readonly LinkedList<KeyValue<K, V>>[] items;
 
+        //Constructor 
         public MyMapNode(int size)
         {
             this.size = size;
@@ -23,6 +24,7 @@ namespace HashTableProgram
             return Math.Abs(position);
         }
 
+        //get the key value 
         public V Get(K key)
         {
             int position = GetArrayPosition(key);
@@ -37,6 +39,7 @@ namespace HashTableProgram
             return default(V);
         }
 
+        //For add
         public void Add(K key, V value)
         {
             int position = GetArrayPosition((K)key);
@@ -59,6 +62,8 @@ namespace HashTableProgram
         }
 
     }
+
+    //Struct class
     public struct KeyValue<K, V>
     {
         public K Key { get; set; }
